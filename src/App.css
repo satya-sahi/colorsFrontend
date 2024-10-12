@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -22,3 +23,8 @@ table tbody tr{
   max-width: 100px;
 }
 
+body {
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+}
