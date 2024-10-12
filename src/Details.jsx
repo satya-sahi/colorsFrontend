@@ -26,19 +26,23 @@ const Details = () => {
                     <option value='rgb'>RGB</option>
                     <option value='hsl'>HSL</option>
                 </select>
-                {colorsList && colorsList.length > 0 ? (
-                    colorsList.map((color, index) => (
-                        <div class="card" style={{ width: '18rem', backgroundColor: color.hex }} key={index}>
-                            <div class="card-body">
-                                <h5 class="card-title" style={{color:'white'}}>{color.name}</h5>
-                                <p class="card-text" style={{color:'white'}}>{colorType === 'rgb' ? 'RGB: ' + color.rgb.join(', ') : 'HSL: ' + color.hsl.join(', ')}</p>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                    {colorsList && colorsList.length > 0 ? (
+                        colorsList.map((color, index) => (
+                            <div className="card" style={{ width: '18rem', backgroundColor: color.hex }} key={index}>
+                                <div className="card-body">
+                                    <h5 className="card-title" style={{ color: 'white' }}>{color.name}</h5>
+                                    <p className="card-text" style={{ color: 'white' }}>
+                                        {colorType === 'rgb' ? 'RGB: ' + color.rgb.join(', ') : 'HSL: ' + color.hsl.join(', ')}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ))
-                ) :
-                    (
+                        ))
+                    ) : (
                         <p>No colors found!!!</p>
                     )}
+                </div>
+
             </div>
         </>
     )
