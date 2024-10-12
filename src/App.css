@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+table {
+  width: 50%;
+  border: 1px solid;
+  align-self: center;
+  display: table;
+}
+
+table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #dddddd;
+}
+table tbody tr{
+  max-width: 100px;
+}
+
